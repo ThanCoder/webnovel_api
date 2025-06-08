@@ -4,12 +4,10 @@ import { html } from 'hono/html'
 
 const app = new Hono()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
 
-app.get('/test',(c)=>{
-  return c.html( html`<div style="font-family: sans-serif;">Hello from JSX!</div>`)
+
+app.get('/',(c)=>{
+  return c.html(html`<h1>hello</h1>`)
 })
 
 serve({
